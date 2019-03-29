@@ -22,10 +22,14 @@ export default class MovieList extends Component {
   }
 
   render() {
+    // console.log("MovieList Props");
+    // console.log(this.state.movies);
     return (
       <div className="movie-list">
         {this.state.movies.map(movie => (
-          <MovieDetails key={movie.id} movie={movie} />
+          <Link to={`/movies/${movie.id}`}>
+            <MovieDetails key={movie.id} movie={movie} />
+          </Link>
         ))}
       </div>
     );
