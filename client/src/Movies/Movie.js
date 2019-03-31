@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 export default class Movie extends Component {
   constructor(props) {
+    console.log(props);
     super(props);
     this.state = {
       movie: null
